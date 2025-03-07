@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+
+ 
+ /* Container for the swiper */
+ .swiperContainer {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    gap: 20px; /* Adjust gap between slides */
+    border: 1px solid red;
+  }
+  
+  /* Individual slides */
+  .swiperSlide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    scroll-snap-align: start;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    border: 1px solid red;
+  }
+  
+  /* Hide scrollbar */
+  .swiper-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .swiper-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
