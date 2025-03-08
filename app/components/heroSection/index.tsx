@@ -198,7 +198,7 @@ export default function HeroSection() {
         </div>
 
         
-        <div className="absolute bottom-0 w-full mxxl:hidden mmd:block 3xl:hidden">
+        <div className="absolute bottom-0 w-full mxxl:hidden mmd:block 2xl:hidden 3xl:hidden">
           <div className={styles.scroller} ref={scrollerRef}>
             <div className={styles.innerScroller} ref={scrollerInnerRef}>
               {imagePathArray.map((items) => (
