@@ -28,10 +28,10 @@ export default function HiringProcess() {
       ref={container}
       className="sticky w-full top-[0px] mx-auto flex flex-col self-stretch bg-lemon isolate"
     >
-      <div className="top-[0px] z-10 w-full flex flex-col items-center self-stretch   pt-[125px] gap-[504px] h-[511px] sticky ">
+      <div className="top-[0px] z-10 w-full flex flex-col items-center self-stretch   pt-[125px] gap-[504px] h-[511px] sticky">
         <Image
           src="/svg/backgroundpattern.svg"
-          className="absolute -z-1"
+          className="absolute z-1"
           alt="background"
           layout="fill"
           objectFit="cover"
@@ -86,7 +86,7 @@ export default function HiringProcess() {
     className="my-6"
   />
 </div>
-      <div className="h-[300vh] mxs:h-[300vh]" />
+      <div className="h-[300vh] mxs:h-[300vh] mxxs:h-[400vh]" />
     </div>
   );
 }

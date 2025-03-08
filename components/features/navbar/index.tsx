@@ -6,6 +6,7 @@ import { Typography } from "@/components/ui/typography";
 import Hamburger from "@/components/icons/hamburger";
 
 export default function NavBar() {
+
   return (
     <div className="relative flex justify-between items-center max-w-[1218px] h-[46px] mx-auto mxl:px-[50px] mxs:px-[20px]">
       <div>
@@ -44,8 +45,8 @@ export default function NavBar() {
             Contact
           </Typography>
         </div>
-        <div>
-          <Button children={"Join the waitlist"} icon={<ArrowDiagonal />} />
+        <div className="w-full">
+          <Button children={"Join the waitlist"} icon={<ArrowDiagonal/>} />
         </div>
       </div>
     </div>

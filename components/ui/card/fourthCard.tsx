@@ -7,7 +7,7 @@ const FourthCard = React.forwardRef<HTMLDivElement, fourthCardProps>(
     return (
       <div
         ref={ref}
-        className="flex sticky z-20  w-full  h-[700px] mxs:h-[500px] top-[180px] justify-center items-center gap-[118.061px] self-stretch"
+        className="flex sticky z-20  w-full  h-[700px] mxs:h-[500px] mxxs:h-[400px] top-[180px] justify-center items-center gap-[118.061px] self-stretch"
       >
         <div
           className="flex  flex-col justify-between  items-start p-[26.222px] mxs:p-[18.88px] w-[468.056px] mxs:w-[300.9px] h-[302.86px] mxs:h-[218px] rounded-[26.222px] bg-[#fff] shadow-[0px_14px_73.9px_0px_rgba(0,0,0,0.09)]"

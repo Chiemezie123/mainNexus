@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Facebook from "@/components/icons/facebook";
 import Inbox from "@/components/icons/inbox";
 import Instagram from "@/components/icons/instagram";
@@ -17,32 +17,49 @@ import Down from "@/components/icons/down";
 import Image from "next/image";
 
 export default function Footer() {
-  // State to manage visibility of each section
+
   const [isCompanyVisible, setCompanyVisible] = useState(true);
   const [isResourcesVisible, setResourcesVisible] = useState(true);
   const [isLearnVisible, setLearnVisible] = useState(true);
 
-  // Toggle functions for each section
+ 
   const toggleCompany = () => setCompanyVisible(!isCompanyVisible);
   const toggleResources = () => setResourcesVisible(!isResourcesVisible);
   const toggleLearn = () => setLearnVisible(!isLearnVisible);
 
+
+  const [imageSrc, setImageSrc] = useState("/images/Group4.png");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 375) {
+        setImageSrc("/images/Group3.png");
+      } else {
+        setImageSrc("/images/Group4.png"); 
+      }
+    };
+
+   
+    handleResize();
+
+   
+    window.addEventListener("resize", handleResize);
+
+  
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="w-full bg-[#000] isolate">
       <div className="mx-auto flex flex-col items-center max-w-[1440px] pb-[75.45px]">
-        <div
-          className="relative max-w-[1440px] mx-auto pt-[131.81px] pb-[42.81px]"
-          style={{
-            // opacity: 0.2,
-            // background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%), url(<path-to-image>) lightgray 0% 0% / 25px 25px repeat`,
-            mixBlendMode: "luminosity",
-            backdropFilter: "blur(5px)",
-          }}
-        >
-          <div className=" inset-0 w-full h-full">
-            <Image src={"/images/tony.png"} alt="fuzzy" fill />
+      <div className="relative max-w-[1440px] w-full mx-auto pt-[131.81px] pb-[42.81px] h-[499px]">
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src={imageSrc}
+              alt="fuzzy"
+              fill
+              style={{ objectFit: "contain" }} 
+            />
           </div>
-          <Nexus />
         </div>
 
         <div className="flex flex-col items-start gap-16 mlg:px-[20px]">
@@ -63,7 +80,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex items-start gap-12 w-[541px] mmd:w-full mxs:flex-col mxs:gap-0">
-              {/* Company Section */}
+          
               <div className="flex flex-col items-start gap-5 flex-1 mxs:w-full  mxs:border-t mxs:border-b mxs:border-[#1A1A1A] mxs:pt-[20px] mxs:pb-[20px]">
                 <div className="mxs:flex mxs:items-center mxs:justify-between mxs:w-full cursor-pointer">
                   <Typography
@@ -241,7 +258,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Rest of the footer content */}
           <div className="flex flex-col items-start gap-[1.5rem]">
             <div className="w-full mxs:hidden">
               <Stroke />

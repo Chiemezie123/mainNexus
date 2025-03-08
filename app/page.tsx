@@ -1,9 +1,9 @@
 import React from "react";
 import HeroSection from "./components/heroSection";
-import WhyWorKItUs from "./components/secondsection";
-import OpenPositions from "./components/thirdSection";
-import LifeAtNexus from "./components/fourthSection";
-import HiringProcess from "./components/fifthSection";
+import WhyWorKItUs from "./components/whyworkwithus";
+import OpenPositions from "./components/openpositions";
+import LifeAtNexus from "./components/lifeAtNexus";
+import HiringProcess from "./components/hiringProcess";
 import Footer from "./components/footer";
 
 export default function Page() {
