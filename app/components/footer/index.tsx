@@ -108,7 +108,7 @@ export default function Footer() {
                     >
                       About
                     </Typography>
-                    <div className="flex items-center gap-[8px]">
+                    <div className=" w-full flex items-center gap-[8px]">
                       <Typography
                         variant="p-xl"
                         font="inter"
@@ -117,11 +117,11 @@ export default function Footer() {
                       >
                         Careers
                       </Typography>
-                      <div className="flex items-center justify-center p-[2px] gap-[10px] rounded-2xl border border-black bg-[rgba(200,239,125,0.10)]">
+                      <div className="w-full flex items-center justify-center py-[2px] px-[6px] mxs:px-[8px]  rounded-2xl border border-black bg-[rgba(200,239,125,0.10)]">
                         <Typography
                           color="lemon"
                           fontWeight="medium"
-                          className="text-[12px] leading-[18px]"
+                          className="text-[10px] mxs:text-[12px] leading-[18px]"
                         >
                           We’re hiring
                         </Typography>
