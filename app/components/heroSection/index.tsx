@@ -51,7 +51,7 @@ export default function HeroSection() {
   return (
     <div className="mx-auto max-w-[1400px] gap-[62px] flex flex-col items-center mxl:px-[20px] mxs:px-[0px]">
       <div className="relative h-[868px] w-full bg-[#000] rounded-[20px] mxs:rounded-none overflow-hidden">
-        {/* Background Image */}
+        
         <Image
           src="/svg/backgroundpattern.svg"
           className="absolute"
@@ -60,9 +60,9 @@ export default function HeroSection() {
           objectFit="cover"
         />
 
-        {/* Images with Overflow Hidden */}
+        
         <div className="mmd:hidden">
-          {/* Black Man */}
+          
           <motion.div
             className="absolute top-[150px] mlg:top-[120px] left-[50px] overflow-hidden w-[229px] h-[227px] mxl:left-[0px] mlg:w-[200px] mlg:h-[200px] mlg:left-[10px]"
             initial={{ x: -300, y: -300 }}
@@ -77,7 +77,7 @@ export default function HeroSection() {
             />
           </motion.div>
 
-          {/* Black Woman */}
+          
           <motion.div
             className="absolute top-[150px] mlg:top-[120px] left-[1100px] overflow-hidden w-[229px] h-[227px] mlg:w-[200px] mlg:h-[200px] mxl:left-[950px] mlg:left-[750px] "
             initial={{ x: 500, y: -100 }}
@@ -91,7 +91,7 @@ export default function HeroSection() {
               height={227}
             />
           </motion.div>
-          {/* Shinning Teeth Woman */}
+          
           <motion.div
             className="absolute top-[400px] left-[150px] overflow-hidden w-[193.3px] h-[193.3px] mlg:w-[180px] mlg:h-[180px] mxl:left-[80px] mlg:left-[50px] mmd:left-[70px]"
             initial={{ x: -400, y: -50 }}
@@ -105,7 +105,7 @@ export default function HeroSection() {
               height={193.3}
             />
           </motion.div>
-          {/* Indian Man */}
+         
           <motion.div
             className="absolute top-[600px] left-[1170px] overflow-hidden w-[229px] h-[227px]  mlg:w-[200px] mlg:h-[200px] mxl:left-[1000px] mlg:left-[800px] mmd:left-[640px]"
             initial={{ x: 300, y: 300 }}
@@ -120,7 +120,7 @@ export default function HeroSection() {
             />
           </motion.div>
 
-          {/* Asia Man */}
+          
           <motion.div
             className="absolute top-[650px] left-[-100px] overflow-hidden w-[193.3px] h-[193.3px]"
             initial={{ x: -200, y: -200 }}
@@ -135,7 +135,6 @@ export default function HeroSection() {
             />
           </motion.div>
 
-          {/* Spanish Woman */}
           <motion.div
             className="absolute top-[750px] left-[600px] overflow-hidden w-[229px] h-[227px] mlxg:left-[530px] mlg:w-[200px] mlg:h-[200px] mlg:left-[400px] mmd:left-[270px]"
             initial={{ opacity: 0, y: 50, scale: 0.8 }}
@@ -150,13 +149,13 @@ export default function HeroSection() {
             />
           </motion.div>
         </div>
-        {/* NavBar */}
+       
         <div className="relative w-full pt-[50px]">
           <NavBar />
         </div>
-        {/* Centered Content */}
+       
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          {/* Heading */}
+          
           <div className="relative w-[674px] mb-[14px] mxs:w-[320px]">
             <div className="absolute inset-0 flex left-0 top-1/2 mxs:hidden">
               <Queue />
@@ -173,7 +172,7 @@ export default function HeroSection() {
             </Typography>
           </div>
 
-          {/* Paragraph */}
+         
           <div className="max-w-[550px] h-[64px] mb-[27px] mxs:w-[300px]">
             <Typography
               variant="p-xxl"
@@ -188,7 +187,7 @@ export default function HeroSection() {
             </Typography>
           </div>
 
-          {/* Button */}
+        
           <div className="mt-[10px]">
             <Button
               size="lg"
@@ -198,7 +197,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Swiper Section */}
+        
         <div className="absolute bottom-0 w-full mxxl:hidden mmd:block 3xl:hidden">
           <div className={styles.scroller} ref={scrollerRef}>
             <div className={styles.innerScroller} ref={scrollerInnerRef}>
@@ -217,7 +216,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Backed by Companies Section */}
+     
       <div className="w-full flex items-center justify-between px-[30px] mxl:px-0 mlg:flex-col mxl:gap-[10px] mmd:block">
         <div className="w-[291px] mxl:text-center mmd:mx-auto">
           <Typography

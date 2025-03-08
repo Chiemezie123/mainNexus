@@ -15,7 +15,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-blackOne text-white shadow hover:bg-Grey-500",
+        default: "bg-blackOne text-white shadow hover:bg-white hover:text-black",
       },
       size: {
         default: "w-[11.0625rem] h-[2.5rem]  p-[0.625rem]",
@@ -49,6 +49,10 @@ const buttonVariants = cva(
   }
 );
 
+interface IconProps {
+  fill?: string;
+}
+
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
@@ -56,7 +60,7 @@ export interface ButtonProps
   color?: TypographyColors;
   font?: TypographyFont;
   fontWeight?: TypographyFontWeight;
-  icon?: React.ReactNode;
+  icon?: React.ReactElement<IconProps>;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -75,6 +79,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
+    const [isHovered, setIsHovered] = React.useState(false);
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
@@ -82,18 +87,27 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           buttonVariants({ variant, size, className, color, font, fontWeight })
         )}
         ref={ref}
+       
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         {...props}
       >
         <Typography
           color="whiteOne"
           fontWeight="semibold"
           font="inter"
-          className="text-[1rem]"
+          className="text-[1rem] hover:text-black"
         >
           {" "}
           <div>{children}</div>
         </Typography>
-        {icon && <div className="flex items-center justify-center">{icon}</div>}
+        {icon && (
+          <div className="flex items-center justify-center">
+            {React.cloneElement(icon, {
+              fill: isHovered ? "black" : "white", 
+            })}
+          </div>
+        )}
       </Comp>
     );
   }

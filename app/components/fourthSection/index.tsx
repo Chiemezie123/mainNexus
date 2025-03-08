@@ -21,7 +21,7 @@ export default function LifeAtNexus() {
   }, []);
 
   return (
-    <div className="mx-auto flex flex-col items-start gap-10 max-w-[1113px] py-[177px] mlg:px-[20px] h-full">
+    <div className="mx-auto flex flex-col items-start gap-10 max-w-[1113px] py-[177px] mxs:py-[80px] mlg:px-[20px] h-full">
       <div className="flex flex-col items-start gap-4 w-[457px] mxs:w-full">
         <Typography
           variant="p-l"

@@ -36,7 +36,7 @@ export default function HiringProcess() {
           layout="fill"
           objectFit="cover"
         />
-        <div className="flex flex-col z-[1] items-center gap-5 w-[491px] mxs:max-w-[430px]">
+        <div className="flex flex-col z-[1] items-center gap-5 w-[491px] mxs:w-full mxs:max-w-[400px] mxxss:w-full mxxss:max-w-[300px]">
           <Typography
             variant="p-l"
             font="inter"
@@ -51,7 +51,7 @@ export default function HiringProcess() {
             font="instrument"
             fontWeight="regular"
             color="blackOriginal"
-            className="tracking-[-2.16px] mxs:max-w-[328px]"
+            className="tracking-[-2.16px] mxs:max-w-[328px] mxxss:max-w-[300px] mxxss:text-center"
           >
             Your Journey to Nexus
           </Typography>
