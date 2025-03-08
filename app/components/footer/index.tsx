@@ -75,7 +75,7 @@ export default function Footer() {
                     Company
                   </Typography>
                   <div
-                    className="mxxl:hidden mxs:block"
+                    className="mxxl:hidden 2xl:hidden mxs:block"
                     onClick={toggleCompany}
                   >
                     {isCompanyVisible ? <Up /> : <Down />}
@@ -134,7 +134,7 @@ export default function Footer() {
                     Resources
                   </Typography>
                   <div
-                    className="mxxl:hidden mxs:block"
+                     className="mxxl:hidden 2xl:hidden mxs:block"
                     onClick={toggleResources}
                   >
                     {isResourcesVisible ? <Up /> : <Down />}
@@ -197,7 +197,7 @@ export default function Footer() {
                   >
                     Learn
                   </Typography>
-                  <div className="mxxl:hidden mxs:block" onClick={toggleLearn}>
+                  <div className="mxxl:hidden 2xl:hidden mxs:block" onClick={toggleLearn}>
                     {isLearnVisible ? <Up /> : <Down />}
                   </div>
                 </div>
