@@ -93,7 +93,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         <Typography
-          color="whiteOne"
+          color={isHovered ? "blackOne" : "whiteOne"}
           fontWeight="semibold"
           font="inter"
           className="text-[1rem] hover:text-black"
