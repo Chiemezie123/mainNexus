@@ -73,14 +73,19 @@ export default function HiringProcess() {
         <FourthCard key={index} ref={elementRef} {...items} />
       ))}
 
-      <div className="flex flex-col h-screen sticky  bg-black/50 z-40 top-[0px] w-full justify-end items-center self-stretch pt-[738px] mlg:pt-[600px] gap-[46px]">
-        <Button
-          children={"Start Your Journey"}
-          icon={<ArrowDiagonal />}
-          size="lg"
-          className="my-6"
-        />
-      </div>
+<div
+  className="flex flex-col h-screen sticky  z-40 top-[0px] w-full justify-end items-center self-stretch pt-[738px] mlg:pt-[600px] gap-[46px]"
+  style={{
+    background: "linear-gradient(180deg, rgba(200, 239, 125, 0.00) 0%, #C8EF7D 70%)",
+  }}
+>
+  <Button
+    children={"Start Your Journey"}
+    icon={<ArrowDiagonal />}
+    size="lg"
+    className="my-6"
+  />
+</div>
       <div className="h-[300vh] mxs:h-[300vh]" />
     </div>
   );
