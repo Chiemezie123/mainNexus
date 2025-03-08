@@ -17,8 +17,11 @@ const SecondCard: React.FC<SecondCardProps> = ({ data }) => {
   return (
     <>
       {data.map((item, index) => (
-        <div key={index} className="flex flex-col items-start gap-4 w-[328px] mlg:w-[280px] mmd:w-[200px] mxs:w-full">
-          <div  className="flex flex-col items-start gap-4 mxs:gap-[8px] w-full">
+        <div
+          key={index}
+          className="flex flex-col items-start gap-4 w-[328px] mlg:w-[280px] mmd:w-[200px] mxs:w-full"
+        >
+          <div className="flex flex-col items-start gap-4 mxs:gap-[8px] w-full">
             {/* Number and Header */}
             <div className="flex items-center gap-2.5 py-5 self-stretch border-b border-[#828385]">
               <Typography

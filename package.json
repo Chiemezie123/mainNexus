@@ -22,6 +22,9 @@
     "@radix-ui/react-slot": "^1.1.2",
   
       
+    "@studio-freight/lenis": "^1.0.42",
+  
+      
     "autoprefixer": "^10.4.20",
   
       
@@ -47,6 +50,12 @@
   
       
     "react-dom": "^19.0.0",
+  
+      
+    "react-slick": "^0.30.3",
+  
+      
+    "slick-carousel": "^1.8.1",
   
       
     "swiper": "^11.2.5",

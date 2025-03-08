@@ -1,14 +1,14 @@
-import { Typography } from "@/components/typography";
+import { Typography } from "@/components/ui/typography";
 import React from "react";
 import { roleCardArray } from "@/constant/data";
-import ThirdCard from "@/components/card/thirdCard";
+import ThirdCard from "@/components/ui/card/thirdCard";
 
-export default function ThirdSection() {
+export default function OpenPositions() {
   return (
     <div className="w-full mlg:px-[20px] mxs:px-0">
       <div className="mx-auto max-w-[1400px] h-[982px] mxs:h-full flex justify-end items-center pt-[85px] mlg:pt-[40px] pr-[124px] mlg:pr-[62px] pb-[57px] pl-[164px] mlg:pl-[62px] bg-[#0D0F0E] rounded-[20px]  mxs:rounded-none mxs:py-[80px] mxs:px-[20px]">
-        <div className="w-full h-full flex flex-col gap-[82px] mlg:gap-[62px] mxs:gap-[38px]">
-          <div className="flex flex-col gap-[13px] mlg:gap-[10px] items-start">
+        <div className="w-full h-full flex flex-col mxxl:gap-[82px] mlg:gap-[62px] mxs:gap-[38px] 3xl:gap-[82px]">
+          <div className="flex flex-col mxxl:gap-[13px] mlg:gap-[10px] items-start">
             <div className="w-full">
               <Typography
                 variant="p-l"

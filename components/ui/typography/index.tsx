@@ -1,17 +1,17 @@
 "use client";
 import React, { JSX } from "react";
-import { cn } from "@/libs/utils";
+import { cn } from "@/utils/utils";
 import { cva } from "class-variance-authority";
 import { TypographyProps, variantMapping } from "./index.types";
 
 export const colorClasses = {
-  "blackOne": "text-blackOne",
-  "blackTwo": "text-blackTwo",
-  "greyOne": "text-greyOne",
-  "blackOriginal": "text-blackOriginal",
-  "lemon": "text-lemon",
-  "whiteOne": "text-whiteOne",
-}
+  blackOne: "text-blackOne",
+  blackTwo: "text-blackTwo",
+  greyOne: "text-greyOne",
+  blackOriginal: "text-blackOriginal",
+  lemon: "text-lemon",
+  whiteOne: "text-whiteOne",
+};
 
 export const typography = cva("", {
   variants: {
@@ -22,12 +22,12 @@ export const typography = cva("", {
       "h-lx": "text-h-l mmd:text-h-lxr mxs:text-h-lxr",
       "h-lm": "text-h-lm mmd:text-h-lmr mxs:text-h-lmr",
       "h-ls": "text-h-ls mmd:text-h-l mxs:text-h-lsr",
-      "h-l":"text-h-l mmd:text-h-m mxs:text-h-lr",
+      "h-l": "text-h-l mmd:text-h-m mxs:text-h-lr",
       "h-m": "text-h-m mmd:text-h-mr mxs:text-h-mr",
       "h-s": "text-h-s mmd:text-h-sr mxs:text-h-sr",
-      "h-c":"text-h-c",
+      "h-c": "text-h-c",
 
-    //  paragraph
+      //  paragraph
       "p-xxl": "text-p-xxl mmd:text-p-xxlr mxs:text-p-xxlr",
       "p-xl": "text-p-xl mmd:text-p-xl mxs:text-p-xl",
       "p-l": "text-p-l mmd:text-p-l mxs:text-p-l",
@@ -39,7 +39,7 @@ export const typography = cva("", {
       instrument: "font-instrument",
       inter: "font-inter",
     },
-    color:colorClasses,
+    color: colorClasses,
     fontWeight: {
       thin: "font-thin",
       extralight: "font-extralight",
@@ -66,7 +66,7 @@ export const typography = cva("", {
 // Typography component
 function Typography(props: TypographyProps) {
   const {
-    variant="div",
+    variant = "div",
     tag,
     underline = "none",
     fontWeight = "regular",
@@ -81,17 +81,15 @@ function Typography(props: TypographyProps) {
   } = props;
 
   // Resolved tag
-  const Tag = (tag ||
-    variantMapping[variant] ||
-    "p") as React.ElementType;
+  const Tag = (tag || variantMapping[variant] || "p") as React.ElementType;
 
   // Classes
   const classNameI = cn(
     gutterBottom && "mb-4",
     noWrap && "overflow-hidden text-ellipsis whitespace-nowrap",
-    className && className,
+    className && className
   );
- 
+
   return (
     <Tag
       className={typography({
@@ -101,18 +99,13 @@ function Typography(props: TypographyProps) {
         color,
         align,
         font,
-        className: cn(
-          classNameI && classNameI,
-        ),
+        className: cn(classNameI && classNameI),
       })}
       {...rest}
     >
       {children}
     </Tag>
   );
-  
 }
- 
 
 export { Typography };
-

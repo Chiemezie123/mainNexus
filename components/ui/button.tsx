@@ -1,24 +1,27 @@
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
-import { cn } from "@/libs/utils"
-import { TypographyColors, TypographyFont, TypographyFontWeight } from "../typography/index.types"
-import { colorClasses } from "../typography"
-import { Typography } from "../typography"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/utils/utils";
+import {
+  TypographyColors,
+  TypographyFont,
+  TypographyFontWeight,
+} from "./typography/index.types";
+import { colorClasses } from "./typography";
+import { Typography } from "./typography";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-[0.625rem] whitespace-nowrap rounded-[100px] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default:"bg-blackOne text-white shadow hover:bg-Grey-500",
-
+        default: "bg-blackOne text-white shadow hover:bg-Grey-500",
       },
       size: {
         default: "w-[11.0625rem] h-[2.5rem]  p-[0.625rem]",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "w-[13.0625rem] h-[3.125rem] py-[10px] px-[28px]",
-        md:"w-[12.8125rem] h-[3.125rem]  py-[10px] px-[24px]",
+        md: "w-[12.8125rem] h-[3.125rem]  py-[10px] px-[24px]",
         icon: "h-9 w-9",
       },
       font: {
@@ -44,7 +47,7 @@ const buttonVariants = cva(
       size: "default",
     },
   }
-)
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -52,34 +55,49 @@ export interface ButtonProps
   asChild?: boolean;
   color?: TypographyColors;
   font?: TypographyFont;
-  fontWeight?:TypographyFontWeight;
+  fontWeight?: TypographyFontWeight;
   icon?: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, children, color, font="inter", variant, fontWeight, icon, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
+  (
+    {
+      className,
+      children,
+      color,
+      font = "inter",
+      variant,
+      fontWeight,
+      icon,
+      size,
+      asChild = false,
+      ...props
+    },
+    ref
+  ) => {
+    const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className ,color ,font, fontWeight }))}
+        className={cn(
+          buttonVariants({ variant, size, className, color, font, fontWeight })
+        )}
         ref={ref}
         {...props}
       >
-         <Typography  color="whiteOne" fontWeight="semibold" font="inter" className="text-[1rem]">
-            {" "}
-            <div>{children}</div>
-          </Typography>
-          {icon &&
-          ( <div className="flex items-center justify-center">
-            {icon}
-            </div>
-
-          )}
+        <Typography
+          color="whiteOne"
+          fontWeight="semibold"
+          font="inter"
+          className="text-[1rem]"
+        >
+          {" "}
+          <div>{children}</div>
+        </Typography>
+        {icon && <div className="flex items-center justify-center">{icon}</div>}
       </Comp>
-
-    )
+    );
   }
-)
-Button.displayName = "Button"
+);
+Button.displayName = "Button";
 
-export {Button, buttonVariants}
+export { Button, buttonVariants };

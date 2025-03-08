@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "@/libs/utils";
+import { cn } from "@/utils/utils";
 
 interface InputProps extends React.ComponentProps<"input"> {
   leftIcon?: React.ReactNode;
@@ -9,7 +9,7 @@ interface InputProps extends React.ComponentProps<"input"> {
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, leftIcon, rightIcon, ...props }, ref) => {
     return (
-      <div className="relative border flex " style={{padding: "12px 20px"}}>
+      <div className="relative border flex " style={{ padding: "12px 20px" }}>
         {leftIcon && (
           <div className="inset-y-0 left-0 flex items-center pl-3">
             {leftIcon}
@@ -29,9 +29,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {...props}
         />
         {rightIcon && (
-          <div className=" inset-y-0  flex items-center pr-3">
-            {rightIcon}
-          </div>
+          <div className=" inset-y-0  flex items-center pr-3">{rightIcon}</div>
         )}
       </div>
     );
