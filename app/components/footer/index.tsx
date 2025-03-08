@@ -51,7 +51,7 @@ export default function Footer() {
   return (
     <div className="w-full bg-[#000] isolate">
       <div className="mx-auto flex flex-col items-center max-w-[1440px] pb-[75.45px]">
-      <div className="relative max-w-[1440px] w-full mx-auto pt-[131.81px] pb-[42.81px] h-[499px]">
+      <div className="relative max-w-[1440px] w-full mx-auto pt-[131.81px] pb-[42.81px] h-[499px] mxs:h-[310px]">
           <div className="absolute inset-0 w-full h-full">
             <Image
               src={imageSrc}
