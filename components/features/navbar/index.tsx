@@ -11,7 +11,7 @@ export default function NavBar() {
       <div>
         <Logo />
       </div>
-      <div className="mxs:block mxxl:hidden">
+      <div className="mxs:block mxxl:hidden 2xl:hidden">
         <Hamburger />
       </div>
       <div className="flex items-center gap-[47px] mxs:hidden">
