@@ -1,14 +1,44 @@
+'use client'
 import { Typography } from "@/components/ui/typography";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SecondCard from "@/components/ui/card/secondCard";
 import { secondCardArray, firstCardArray } from "@/constant/data";
 import FirstCard from "@/components/ui/card/firstCard";
 
-export default function WhyWorKItUs() {
+export default function WhyWorkItUs() {
+  
+  const firstSectionRef = useRef<HTMLDivElement>(null);
+  const secondSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const checkVisibility = (ref: React.RefObject<HTMLDivElement>) => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        if (isVisible) {
+          ref.current.classList.add("visible");
+        }
+      }
+    };
+  
+    const handleScroll = () => {
+      checkVisibility(firstSectionRef);
+      checkVisibility(secondSectionRef);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); 
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="flex max-w-[1114px] flex-col items-start gap-[143px] mxs:gap-[80px] mx-auto">
-      <div className="w-full flex flex-col items-start gap-4 pt-[151px] mxs:pt-[80px] self-stretch mlg:px-[20px]">
+      {/* First Section */}
+      <div
+        ref={firstSectionRef}
+        className="fade-in w-full flex flex-col items-start gap-4 pt-[151px] mxs:pt-[80px] self-stretch mlg:px-[20px]"
+      >
         <div className="w-full">
           <Typography
             variant="p-l"
@@ -58,7 +88,12 @@ export default function WhyWorKItUs() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start gap-[70px] mlg:gap-[40px] pb-[190px] mxs:pb-[80px] self-stretch mlg:px-[20px] mxs:w-full">
+
+      {/* Second Section */}
+      <div
+        ref={secondSectionRef}
+        className="fade-in flex flex-col items-start gap-[70px] mlg:gap-[40px] pb-[190px] mxs:pb-[80px] self-stretch mlg:px-[20px] mxs:w-full"
+      >
         <div className="flex flex-col items-start gap-4 w-[429px] mxs:w-full">
           <div>
             <Typography

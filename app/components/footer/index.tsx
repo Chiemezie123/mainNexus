@@ -1,5 +1,5 @@
 "use client";
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect,useRef } from "react";
 import Facebook from "@/components/icons/facebook";
 import Inbox from "@/components/icons/inbox";
 import Instagram from "@/components/icons/instagram";
@@ -29,6 +29,32 @@ export default function Footer() {
 
 
   const [imageSrc, setImageSrc] = useState("/images/Group4.png");
+  
+    const footerRef = useRef<HTMLDivElement>(null);
+    
+    
+      useEffect(() => {
+       
+        const checkVisibility = (ref: React.RefObject<HTMLDivElement>) => {
+          if (ref.current) {
+            const rect = ref.current.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+            if (isVisible) {
+              ref.current.classList.add("visible");
+            }
+          }
+        };
+    
+      
+        const handleScroll = () => {
+          checkVisibility(footerRef);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); 
+    
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -62,7 +88,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-start gap-16 mlg:px-[20px]">
+        <div ref={footerRef} className="fade-in flex flex-col items-start gap-16 mlg:px-[20px]">
           <div className="flex items-start justify-between self-stretch mxs:flex-col mxs:gap-[32px]">
             <div className="flex flex-col items-start gap-[23px] w-[426px] mmd:w-full">
               <Logo />

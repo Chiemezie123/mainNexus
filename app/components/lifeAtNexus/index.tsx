@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import Image from "next/image";
 import ArrowDiagonal from "@/components/icons/arrowDiagonal";
 import { Typography } from "@/components/ui/typography";
@@ -9,6 +9,31 @@ import { descriptionSwiper } from "@/constant/data";
 
 export default function LifeAtNexus() {
   const [currentIndex, setCurrentIndex] = useState(0);
+   const fourthSectionRef = useRef<HTMLDivElement>(null);
+    
+    
+      useEffect(() => {
+       
+        const checkVisibility = (ref: React.RefObject<HTMLDivElement>) => {
+          if (ref.current) {
+            const rect = ref.current.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+            if (isVisible) {
+              ref.current.classList.add("visible");
+            }
+          }
+        };
+    
+      
+        const handleScroll = () => {
+          checkVisibility(fourthSectionRef);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); 
+    
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,7 +46,7 @@ export default function LifeAtNexus() {
   }, []);
 
   return (
-    <div className="mx-auto flex flex-col items-start gap-10 max-w-[1113px] py-[177px] mxs:py-[80px] mlg:px-[20px] h-full">
+    <div ref={fourthSectionRef} className=" fade-in mx-auto flex flex-col items-start gap-10 max-w-[1113px] py-[177px] mxs:py-[80px] mlg:px-[20px] h-full">
       <div className="flex flex-col items-start gap-4 w-[457px] mxs:w-full">
         <Typography
           variant="p-l"
