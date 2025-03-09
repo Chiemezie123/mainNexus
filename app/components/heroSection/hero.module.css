@@ -1,55 +1,14 @@
-/* Container for the scroller */
+
 .scroller {
   overflow: hidden;
   position: relative;
 }
 
-/* Default max-width for larger screens (1440px and above) */
+
 .scroller {
   max-width: 70%;
 }
 
-/* Adjust max-width for tablet screens (768px and below) */
-@media (max-width: 768px) {
-  .scroller {
-    max-width: 100%;
-  }
-}
-
-/* Inner container for the scroller */
-.innerScroller {
-  display: flex;
-  gap: 1rem;
-  padding-block: 1rem;
-  width: max-content;
-  animation: scroll 20s linear infinite;
-}
-
-/* Individual items in the scroller */
-.scrollerItem {
-  flex: 0 0 auto;
-}
-
-/* Company item styling */
-.companyItem {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 9.416px;
-  padding: 0 10px; /* Adjust spacing */
-}
-
-/* Animation for the infinite scroll */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* Mask for the scroller to create a fade effect */
 .scroller[data-animated="true"] {
   mask: linear-gradient(
     90deg,
@@ -60,46 +19,46 @@
   );
 }
 
+@media (max-width: 768px) {
+  .scroller {
+    max-width: 100%;
+  }
+}
 
-/* Keyframes for slide-in animation */
-/* Keyframes for slide-in animation */
-@keyframes slideIn {
+
+.innerScroller {
+  display: flex;
+  gap: 1rem;
+  padding-block: 1rem;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+
+.scrollerItem {
+  flex: 0 0 auto;
+}
+
+
+.companyItem {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 9.416px;
+  padding: 0 10px; 
+}
+
+
+@keyframes scroll {
   from {
-    transform: translateX(-100%); /* Start from outside the left side */
+    transform: translateX(0);
   }
   to {
-    transform: translateX(0); /* Move to the final position */
+    transform: translateX(-50%);
   }
 }
 
-/* Apply the animation to the images */
-.animateSlideIn {
-  /* border: 1px solid red; */
-  animation: slideIn 1s ease-out forwards;
-  opacity: 0; /* Start with opacity 0 */
-}
 
-/* Delay for each image */
-.animateSlideIn:nth-child(1) {
-  animation-delay: 0.5s;
-}
 
-.animateSlideIn:nth-child(2) {
-  animation-delay: 1s;
-}
 
-.animateSlideIn:nth-child(3) {
-  animation-delay: 1.5s;
-}
 
-.animateSlideIn:nth-child(4) {
-  animation-delay: 2s;
-}
-
-.animateSlideIn:nth-child(5) {
-  animation-delay: 2.5s;
-}
-
-.animateSlideIn:nth-child(6) {
-  animation-delay: 3s;
-}

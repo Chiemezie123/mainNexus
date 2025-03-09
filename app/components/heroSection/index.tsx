@@ -20,10 +20,10 @@ import styles from "./hero.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { imagePathArray } from "@/constant/data";
-import Slider from "react-slick";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
+  
   const scrollerRef = useRef<HTMLDivElement>(null);
   const scrollerInnerRef = useRef<HTMLDivElement>(null);
   const companyScrollerRef = useRef<HTMLDivElement>(null);
