@@ -39,6 +39,7 @@ export default function Footer() {
           if (ref.current) {
             const rect = ref.current.getBoundingClientRect();
             const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+            console.log(rect.top,window.innerHeight, "another love")
             if (isVisible) {
               ref.current.classList.add("visible");
             }

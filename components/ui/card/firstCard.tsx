@@ -17,7 +17,7 @@ export default function FirstCard(props: firstCardProps) {
           font="instrument"
           fontWeight="regular"
           color="blackOne"
-          className="italic"
+          className=""
         >
           {props.secondText}
         </Typography>

@@ -34,7 +34,7 @@ export default function WhyWorkItUs() {
 
   return (
     <div className="flex max-w-[1114px] flex-col items-start gap-[143px] mxs:gap-[80px] mx-auto">
-      {/* First Section */}
+   
       <div
         ref={firstSectionRef}
         className="fade-in w-full flex flex-col items-start gap-4 pt-[151px] mxs:pt-[80px] self-stretch mlg:px-[20px]"
@@ -57,7 +57,7 @@ export default function WhyWorkItUs() {
               font="instrument"
               fontWeight="regular"
               color="blackOriginal"
-              className="italic tracking-[-2.16px] mxs:text-center"
+              className="tracking-[-2.16px] mxs:text-center"
             >
               A workplace that works for you
             </Typography>
@@ -89,7 +89,7 @@ export default function WhyWorkItUs() {
         </div>
       </div>
 
-      {/* Second Section */}
+     
       <div
         ref={secondSectionRef}
         className="fade-in flex flex-col items-start gap-[70px] mlg:gap-[40px] pb-[190px] mxs:pb-[80px] self-stretch mlg:px-[20px] mxs:w-full"
@@ -110,7 +110,7 @@ export default function WhyWorkItUs() {
               variant="h-xl"
               font="instrument"
               fontWeight="regular"
-              className="italic"
+              className=""
               color="blackOriginal"
             >
               Values we live by

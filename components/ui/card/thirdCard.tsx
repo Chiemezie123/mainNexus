@@ -27,7 +27,7 @@ export default function ThirdCard(props: thirdCardProps) {
           <div className="mxs:hidden mlg:block">{props.icon}</div>
         </div>
       </div>
-      <div className="mxs:block mxxl:hidden 3xl:hidden">{props.icon}</div>
+      <div className="mxs:block mxxl:hidden 2xl:hidden 3xl:hidden">{props.icon}</div>
     </div>
   );
 }
