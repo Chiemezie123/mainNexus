@@ -83,14 +83,14 @@ const images = [
 ];
 
 export default function HeroSection() {
-  
+
   const scrollerRef = useRef<HTMLDivElement>(null);
   const scrollerInnerRef = useRef<HTMLDivElement>(null);
   const companyScrollerRef = useRef<HTMLDivElement>(null);
   const companyScrollerInnerRef = useRef<HTMLDivElement>(null);
 
   const [imageAssignments, setImageAssignments] = useState(() => {
-    const assignments = {};
+    const assignments: { [key: string]: { id: number; src: string; alt: string } } = {};
     fixedPositions.forEach((pos, index) => {
       assignments[pos.id] = images[index % images.length];
     });
