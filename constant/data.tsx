@@ -188,3 +188,67 @@ export const descriptionSwiper = [
     photo: "/images/UXresearcher.png",
   },
 ];
+
+
+
+
+
+export const fixedPositions = [
+  {
+    id: "position1",
+    desktop: { top: 150, left: 50, width: 220, height: 220 },
+    mxl: { top: 150, left: 0, width: 229, height: 227 },
+    mlg: { top: 120, left: -20, width: 200, height: 200 },
+    initial: { x: -300, y: -300,},
+    animate: { x: 50, y: 50 },
+  },
+  {
+    id: "position2",
+    desktop: { top: 150, left: 1100, width: 220, height: 220 },
+    mxl: { top: 150, left: 950, width: 229, height: 227 },
+    mlg: { top: 120, left: 750, width: 200, height: 200 },
+    initial: { x: 500, y: -100},
+    animate: { x: 10, y: 50},
+  },
+  {
+    id: "position3",
+    desktop: { top: 400, left: 150, width: 220, height: 220 },
+    mxl: { top: 400, left: 80, width: 193.3, height: 193.3 },
+    mlg: { top: 400, left: 50, width: 180, height: 180 },
+    initial: { x: -400, y: -50},
+    animate: { x: 50, y: 50 }, 
+  },
+  {
+    id: "position4",
+    desktop: { top: 600, left: 1170, width: 220, height: 220 },
+    mxl: { top: 600, left: 1000, width: 200, height: 200 },
+    mlg: { top: 600, left: 800, width: 200, height: 200 },
+    initial: { x: 300, y: 300},
+    animate: { x: 50, y: 0},
+  },
+  {
+    id: "position5",
+    desktop: { top: 650, left: -100, width: 220, height: 220 },
+    mxl: { top: 650, left: -100, width: 193.3, height: 193.3 },
+    mlg: { top: 650, left: -100, width: 180, height: 180 },
+    initial: { x: -200, y: -200},
+    animate: { x: 20, y: 20},
+  },
+  {
+    id: "position6",
+    desktop: { top: 750, left: 600, width: 220, height: 220 },
+    mxl: { top: 750, left: 430, width: 200, height: 200 },
+    mlg: { top: 750, left: 400, width: 200, height: 200 },
+    initial: { opacity: 0, y: 50, scale: 0.8 },
+    animate: { opacity: 1, y: 0, scale: 1 },
+  },
+];
+
+export const images = [
+  { id: 1, src: "/images/blackmna5.png", alt: "blackMan" },
+  { id: 2, src: "/images/blackwoman4.png", alt: "blackwoman" },
+  { id: 3, src: "/images/smilingWoman4.png", alt: "mexicoWoman" },
+  { id: 4, src: "/images/indianMan4.png", alt: "indianMan" },
+  { id: 5, src: "/images/kungfu4.png", alt: "koreaMan" },
+  { id: 6, src: "/images/spanishwoman4.png", alt: "spainishWoman" },
+];
