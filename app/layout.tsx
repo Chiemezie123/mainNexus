@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Nexus App", 
   description:
-    "Nexus is an app dedicated to technology advancement and tutoring individuals towards the acknowledgment and mastery of cutting-edge tech.", // Description of the app
+    "Nexus is an app dedicated to technology advancement and tutoring individuals towards the acknowledgment and mastery of cutting-edge tech.", 
   keywords: [
     "technology",
     "tech advancement",

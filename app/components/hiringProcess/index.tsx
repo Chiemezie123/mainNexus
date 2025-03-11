@@ -28,14 +28,29 @@ export default function HiringProcess() {
       ref={container}
       className="sticky w-full top-[0px] mx-auto flex flex-col self-stretch bg-lemon isolate"
     >
-      <div className="top-[0px] z-10 w-full flex flex-col items-center self-stretch pt-[125px] mxs:pt-[100px] gap-[504px] h-[511px]  sticky">
-        <Image
-          src="/svg/backgroundpattern.svg"
-          className="absolute z-1"
-          alt="background"
-          layout="fill"
-          objectFit="cover"
-        />
+      <div className="top-[0px] z-10 w-full flex flex-col items-center self-stretch pt-[125px] mxs:pt-[100px] gap-[504px] h-[511px]  sticky"
+        // style={{
+        //   backgroundImage: "url('/svg/backgroundpattern.svg')",
+        //   backgroundSize: "cover", // Ensures the image covers the container
+        //   backgroundPosition: "center", // Centers the image
+        //   backgroundRepeat: "no-repeat", // Prevents the image from repeating
+        //   backgroundColor:"#b7d8b4"
+        // }}
+      >
+      <img
+    src="/images/Backgroundpattern2.png"
+    alt="background"
+    className="absolute inset-0 w-full h-full object-cover z-100 "
+  />
+          {/* <div className="relative inset-0 w-full h-full bg-red-500">
+          <Image
+            src="/svg/backgroundpattern.svg"
+            className="absolute z-0"
+            alt="background"
+            layout="fill"
+            objectFit="cover"
+          />
+          </div> */}
         <div className="flex flex-col z-[1] items-center gap-5 w-[491px] mxs:w-full mxs:max-w-[400px] mxxss:w-full mxxss:max-w-[300px]">
           <Typography
             variant="p-l"
