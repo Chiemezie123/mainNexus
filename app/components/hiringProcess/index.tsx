@@ -28,7 +28,7 @@ export default function HiringProcess() {
       ref={container}
       className="sticky w-full top-[0px] mx-auto flex flex-col self-stretch bg-lemon isolate"
     >
-      <div className="top-[0px] z-10 w-full flex flex-col items-center self-stretch   pt-[125px] gap-[504px] h-[511px] sticky">
+      <div className="top-[0px] z-10 w-full flex flex-col items-center self-stretch pt-[125px] mxs:pt-[100px] gap-[504px] h-[511px]  sticky">
         <Image
           src="/svg/backgroundpattern.svg"
           className="absolute z-1"
@@ -74,10 +74,8 @@ export default function HiringProcess() {
       ))}
 
 <div
-  className="flex flex-col h-screen sticky  z-40 top-[0px] w-full justify-end items-center self-stretch pt-[738px] mlg:pt-[600px] gap-[46px]"
-  style={{
-    background: "linear-gradient(180deg, rgba(200, 239, 125, 0.00) 0%, #C8EF7D 70%)",
-  }}
+  className="flex flex-col h-screen sticky  z-40 top-[0px] w-full justify-end items-center self-stretch pt-[700px] mlg:pt-[600px] mxs:pt-[500px] gap-[46px]"
+  style={{background:"linear-gradient(180deg, rgba(200, 239, 125, 0.00) 0%, #C8EF7D 70%)",}}
 >
   <Button
     children={"Start Your Journey"}
@@ -86,7 +84,7 @@ export default function HiringProcess() {
     className="my-6"
   />
 </div>
-      <div className="h-[300vh] mxs:h-[300vh] mxxs:h-[400vh]" />
+      <div className="h-[300vh] mxs:h-[500vh] mxxs:h-[400vh] 3xl:[50vh]  mxxxs:h-[500vh]" />
     </div>
   );
 }

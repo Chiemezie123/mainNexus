@@ -199,8 +199,8 @@ export const fixedPositions = [
     desktop: { top: 150, left: 50, width: 220, height: 220 },
     mxl: { top: 150, left: 0, width: 229, height: 227 },
     mlg: { top: 120, left: -20, width: 200, height: 200 },
-    initial: { x: -300, y: -300,},
-    animate: { x: 50, y: 50 },
+    initial: { opacity: 1,x: -300, y: -300,},
+    animate: {opacity: 1, x: 50, y: 50 },
   },
   {
     id: "position2",
@@ -239,7 +239,7 @@ export const fixedPositions = [
     desktop: { top: 750, left: 600, width: 220, height: 220 },
     mxl: { top: 750, left: 430, width: 200, height: 200 },
     mlg: { top: 750, left: 400, width: 200, height: 200 },
-    initial: { opacity: 0, y: 50, scale: 0.8 },
+    initial: { opacity: 1, y: 50, scale: 0.8 },
     animate: { opacity: 1, y: 0, scale: 1 },
   },
 ];
